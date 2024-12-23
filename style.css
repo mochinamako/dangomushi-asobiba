@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*フォント*/
+header {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.page-title {
+  text-align: center;
+  color: #6d9c96;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*h2 {
+  margin-top: 30px;
+}*/
+
+.intro {
+  text-align: center;
+  padding: 0 32px 50px 32px;
+}
+
+article {
+  margin: auto;
+  padding: 2em;
+  max-width: 1020px;
+}
+
+section {
+  margin: auto;
+  padding: 2em;
+  max-width: 1020px;
+}
+
+/*ローディングアニメーション*/
+#loading {
+  transition: all 3.5s;
+  /*ローディングにかかる時間*/
+  background-color: #FFF;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading-text {
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+.spin {
+  width: 64px;
+  height: auto;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/*jsで’loaded’を追加したらこれが有効になる*/
+
+/*マウスストーカー*/
+.dango-ms {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(50vw, 50vh, 0);
+  z-index: 9999;
+  pointer-events: none;
+  transition: all 0.1s ease-out;
+}
+
+.dango-ms-ko {
+  width: 40px;
+  height: auto;
+  /*margin: -10px;*/
+}
+
+.dango-ms.dango-ms-active .dango-ms-ko {
+  opacity: 1;
+}
+
+#btn-open,
+#btn-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #6d9c96;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#menu {
+  background: #6d9c96;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#btn-close {
+  z-index: 300;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+#menu li {
+  text-align: center;
+  padding: 1rem 0;
+  opacity: 0;
+}
+
+#menu a {
+  color: #FFF;
+  text-decoration: none;
+  transition: color .5s;
+}
+
+#menu a:hover {
+  color: #666;
+}
+
+/*ギャラリー*/
+#gallery {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1020px;
+  margin: auto;
+  padding: 30px;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  /*padding-top: 50px;*/
+  width: 100%;
+}
