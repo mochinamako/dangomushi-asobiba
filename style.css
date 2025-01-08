@@ -4,9 +4,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*position: fixed;*/
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   font-style: normal;
+  /*max-width: 1020px;*/
 }
 
 /*フォント*/
@@ -79,8 +81,8 @@ section {
 /*マウスストーカー*/
 .dango-ms {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 5px;
+  left: 20px;
   transform: translate3d(50vw, 50vh, 0);
   z-index: 9999;
   pointer-events: none;
@@ -158,6 +160,7 @@ section {
   max-width: 1020px;
   margin: auto;
   padding: 30px;
+  padding-bottom: 100px;
 }
 
 img {
@@ -168,9 +171,12 @@ img {
 }
 
 footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   text-align: center;
   /*padding-top: 50px;*/
   width: 100%;
+  padding: 5px 0 5px 0;
+  color: #FFF;
+  background-color: #6d9c96;
 }

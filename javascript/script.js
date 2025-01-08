@@ -112,6 +112,11 @@ const lists = [
     'dango5.jpg',
     'dango6.jpg',
     'dango7.jpg',
+    'dango8.jpg',
+    'dango9.jpg',
+    'dango10.jpg',
+    'dango11.jpg',
+    'dango12.jpg',
 ];
 //console.log(lists.length);
 
@@ -121,4 +126,4 @@ for (let i = 0; i < lists.length; i++) {
     gallery.insertAdjacentHTML('beforeend', content);
 }
 //const listsに並んだ画像の数をlists.lengthで取得。「lists.lengthで数えた数」未満のときiに1を足す。
-//const listsに並んだ画像（配列の要素）の番号（インデックス）は0から始まる。画像が7枚の時は、インデックスは0〜6ということになる。
+//const listsに並んだ画像（配列の要素）を数える番号（インデックス）は0から始まる。画像が7枚の時は、インデックスは0〜6ということになる。
